@@ -44,3 +44,13 @@ const swup = new Swup({
   plugins: [new SwupGtagPlugin()]
 });
 ```
+
+## Options
+
+### gaMeasurementId
+
+`gaMeasurementId` defines your GA_MEASUREMENT_ID and is required. Defaults to empty object.
+
+```javascript
+new SwupGtagPlugin({gaMeasurementId: "GA_MEASUREMENT_ID"});
+```
