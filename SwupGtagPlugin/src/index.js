@@ -1,7 +1,7 @@
 import Plugin from '@swup/plugin';
 
-export default class SwupGtagPlugin extends Plugin {
-	name = 'SwupGtagPlugin';
+export default class GtagPlugin extends Plugin {
+	name = 'GtagPlugin';
 
 	constructor() {
 		super();
