@@ -8,7 +8,7 @@ Google Analytic plugin for Global Site Tag (gtag.js). Gtag plugin triggers pagev
 
 Simplified code run by this plugin on `contentReplaced` event:
 
-```JavaScript
+```javascript
 window.gtag("config", "GA_MEASUREMENT_ID", {
   page_title: pageTitle,
   page_path: pageUrl
