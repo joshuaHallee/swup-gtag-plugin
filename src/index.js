@@ -3,21 +3,19 @@ import Plugin from '@swup/plugin';
 export default class GtagPlugin extends Plugin {
 	name = 'GtagPlugin';
 
-	constructor() {
-		super();
-		// this gets run when instance is created
-		// and can be used for things that don't need
-		// to wait for swup instance
-	}
-
 	mount() {
-		// this is executed when swup is enabled with plugin
-		// you can use this.swup here to access swup instance
-		// example: this.swup.on('clickLink', event => console.log(event))
-	}
+		if (typeof window.gtag === 'function') {
+			let title = document.title;
+			let url = window.location.pathname + window.location.search;
 
-	unmount() {
-		// this is executed when swup with plugin is disabled
-		// you can use this.swup here to access swup instance
+			window.gtag("config", "", {
+				page_title: title,
+				page_path: url
+			})
+
+			this.swup.log(`Gtag pageview (url '${url}').`);
+		} else {
+			console.warn('Gtag is not loaded.');
+		}
 	}
 }
