@@ -1,9 +1,6 @@
 
 
 # Swup Gtag Plugin
-### This plugin is still in development and has not been tested.
-Have a question or want to contribute? [Open an issue](https://github.com/joshuaHallee/swup-gtag-plugin/issues).
-
 Google Analytic plugin for Global Site Tag (gtag.js). Gtag plugin triggers pageview event on `contentReplaced` (on each page change). Note that this event is not triggered at the first load, so the first page view must be triggered elsewhere. However, it should be noted that pageview event is called when [gtag.js is installed](https://developers.google.com/analytics/devguides/collection/gtagjs#install_the_global_site_tag).
 
 Simplified code run by this plugin on `contentReplaced` event:
